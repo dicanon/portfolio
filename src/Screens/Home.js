@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
     downloadImg: {
         width: '100%',
         display: "block",
-        margin: "auto",
+        margin: "1vh 0vw",
         [theme.breakpoints.up('md')]:{
             maxWidth: '12.5rem'
         },
