@@ -192,7 +192,7 @@ export default function ProjectSlide() {
                     {/* </Grow> */}
                 </section>
             </div>
-            <div className={classes.groupDot} >
+            <div className={classes.groupDot} style={{cursor: "pointer"}}>
                 {images.map((i, idx) => (
                     <span className={
                         currentSlide === idx ? [classes.dot, classes.dotSelected].join(" ") :
