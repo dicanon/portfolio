@@ -57,14 +57,7 @@ const useStyles = makeStyles((theme) => ({
     }
     },
  
-    // cursor: {
-    // pointerEvents: 'none',
-    // position: 'fixed',
-    // padding: '0.3rem',
-    // backgroundColor: '#fff',
-    // borderRadius: '50%',
-    // mixBlendMode: 'difference',
-    // transition: 'transform 0.3s ease'
+
     
 
 
@@ -173,7 +166,7 @@ function Header() {
           </Link>
         </Grid>
       </Hidden>
-      {/* <Grid item md={1} sm={1} xs /> */}
+
       <Grid
         item
         container
