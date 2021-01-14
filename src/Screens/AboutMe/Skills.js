@@ -65,13 +65,13 @@ function Skills() {
 
         ]
         return (
-            <Grid item container className={classes.root}>
-                <Grid item md={2} sm={4} xs={4} />
-                <Grid item md={4} sm={4} xs={4}>
+            <Grid item container className={classes.root} alignItems='center'>
+                <Grid item xl={2} md={2} sm={4} xs={4} />
+                <Grid item xl={2} md={3} sm={4} xs={4}>
                     <img className={classes.CODEImg} src={CODEsvg} />
                 </Grid>
-                <Grid item md={1} sm={4} xs={4} />
-                <Grid item md={4} sm={12} xs={12}>
+                <Grid item  md={1} sm={4} xs={4} />
+                <Grid item xl={5} md={5} sm={12} xs={12}>
                     <div className={classes.skillsBarContainer}>
                         {skills.map(sk => (
                             <SkillsBar skillName={sk.name} pct={sk.pct} />

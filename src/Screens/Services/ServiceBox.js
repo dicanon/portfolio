@@ -59,8 +59,8 @@ const useStyles = makeStyles(theme => ({
         module: {
             background: theme.palette.common.dark_blue,
             color: 'white',
-            padding: '-7rem',
-            height: '420px',
+            paddingBottom: '3rem',
+            // height: '420px',
 
         }
     }

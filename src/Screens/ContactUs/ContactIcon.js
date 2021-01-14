@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     },
     img: {
         width: '93%',
-        margin: '12%',
+        margin: '0%',
         marginLeft: '-7%'
 
     },

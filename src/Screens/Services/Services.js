@@ -110,9 +110,6 @@ function Services() {
                     </Grid>
                     ))}
 
-            {/* <Grid item md={3} sm={4} xs={4}>
-                <ServiceBox image={design} title={"Design"} body={"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem."} />
-            </Grid> */}
             <Hidden xsDown>
             <Grid item md={1} sm={1} xs={2} />
             </Hidden>

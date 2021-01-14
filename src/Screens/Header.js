@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#0B0B15",
     padding: "3%",
     alignContent: "center",
+    curson: 'pointer'
   },
   logosvg: {
     width: "50%",
@@ -53,8 +54,19 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
       margin: "0px",
       justifyContent: "space-around",
+    }
     },
-  },
+ 
+    // cursor: {
+    // pointerEvents: 'none',
+    // position: 'fixed',
+    // padding: '0.3rem',
+    // backgroundColor: '#fff',
+    // borderRadius: '50%',
+    // mixBlendMode: 'difference',
+    // transition: 'transform 0.3s ease'
+    
+
 
   contactsvg: {
     width: "170%",
@@ -68,20 +80,9 @@ const useStyles = makeStyles((theme) => ({
       width: "220%",
       margin: "0vh 0px",
     },
-  },
-  // iconRoot: {
-  //     marginLeft: '0px',
 
-  //     [theme.breakpoints.down('sm')]: {
-  //         width: '0%'
-
-  //     },
-  //     [theme.breakpoints.down('xs')]: {
-  //         // width: '58px',
-  //         // justifyContent: 'space-between',
-  //         marginLeft: '200px'
-  //     }
-  // }
+  }
+  
 }));
 
 function Header() {
@@ -91,6 +92,8 @@ function Header() {
     const matchesDown = useMediaQuery(theme.breakpoints.up('sm'))
     const [state,setState]=useState(false);
   let url="";
+
+
 
   return (
     <Grid
@@ -108,13 +111,13 @@ function Header() {
         sm={1}
         xs={1}
         justify="center"
-        className={classes.logoRoot}
-      >
+        className={classes.logoRoot} >
+      
         <img className={classes.logosvg} src={logo}></img>
       </Grid>
       {/* <Grid item md={} sm={1} xs={1}/> */}
       <Hidden xsDown>
-        <Grid item md={4} sm={4} xs={1} container justify={"space-around"}>
+        <Grid item md={4} sm={4} xs={1} container justify={"space-around"} style={{cursor: "pointer"}}>
           <Link
             activeClass="active"
             to="section-home"
@@ -123,7 +126,7 @@ function Header() {
             duration="500"
           >
             <Grid item>
-              <Typography variant={"h4"} style={{ textAlign: "center" }}>
+              <Typography variant={"h4"} style={{ textAlign: "center" }} style={{cursor: "pointer"}}>
                 {" "}
                 HOME
               </Typography>
@@ -136,7 +139,7 @@ function Header() {
             smooth="true"
             duration="500"
           >
-            <Grid item>
+            <Grid item className={classes.cursor}>
               <Typography variant={"h4"} style={{ textAlign: "center" }}>
                 ABOUT ME
               </Typography>
@@ -179,11 +182,11 @@ function Header() {
         xs={10}
         className={classes.iconRoot}
         justify={"flex-end"}
-        // justify={matchesDown? "flex-end" : "space-around"}
         alignItems={"center"}
       spacing={0.8}>
       
-        <Grid item md={1} sm={1} xs={1}>
+        <Grid item md={1} sm={1} xs={1} style={{cursor: "pointer"}}>
+          
         <a href="https://wwww.facebook.com/dianne.modanza">
           <img className={classes.iconsvg} src={fb} />
           </a>
@@ -215,6 +218,7 @@ function Header() {
           <img className={classes.contactsvg} src={contact} />
           </Link>
           </Grid>
+        
           <Grid item md={1} sm={1} xs={1}/>
         
       </Grid>

@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     root: {
         background: theme.palette.common.violet_gray,
         padding: '3%',
-        // marginTop: '2%',
+     
 
 
 
