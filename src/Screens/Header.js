@@ -9,6 +9,8 @@ import { Typography, Grid, Hidden, useMediaQuery } from "@material-ui/core";
 import { Link, animateScroll as scroll } from "react-scroll";
 import HomeScreen from "./Home";
 import theme from '../Theme'
+import index from '.././index'
+import AnimatedCursor from "react-animated-cursor"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -73,6 +75,7 @@ const useStyles = makeStyles((theme) => ({
       width: "220%",
       margin: "0vh 0px",
     },
+    
 
   }
   
@@ -85,7 +88,6 @@ function Header() {
     const matchesDown = useMediaQuery(theme.breakpoints.up('sm'))
     const [state,setState]=useState(false);
   let url="";
-
 
 
   return (
@@ -110,7 +112,7 @@ function Header() {
       </Grid>
       {/* <Grid item md={} sm={1} xs={1}/> */}
       <Hidden xsDown>
-        <Grid item md={4} sm={4} xs={1} container justify={"space-around"} style={{cursor: "pointer"}}>
+        <Grid item md={4} sm={4} xs={1} container justify={"space-around"} style={{cursor: "pointer"}} >
           <Link
             activeClass="active"
             to="section-home"
@@ -119,6 +121,14 @@ function Header() {
             duration="500"
           >
             <Grid item>
+            <AnimatedCursor
+      innerSize={8}
+      outerSize={8}
+      color='193, 11, 111'
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={5}
+    />
               <Typography variant={"h4"} style={{ textAlign: "center" }} style={{cursor: "pointer"}}>
                 {" "}
                 HOME
@@ -132,8 +142,9 @@ function Header() {
             smooth="true"
             duration="500"
           >
-            <Grid item className={classes.cursor}>
-              <Typography variant={"h4"} style={{ textAlign: "center" }}>
+            <Grid item >
+
+              <Typography variant={"h4"} style={{ textAlign: "center" }} style={{cursor: "pointer"}}>
                 ABOUT ME
               </Typography>
             </Grid>
@@ -146,7 +157,7 @@ function Header() {
             duration="500"
           >
             <Grid item>
-              <Typography variant={"h4"} style={{ textAlign: "center" }}>
+              <Typography variant={"h4"} style={{ textAlign: "center" }} style={{cursor: "pointer"}}>
                 SERVICES
               </Typography>
             </Grid>
@@ -159,7 +170,7 @@ function Header() {
             duration="500"
           >
             <Grid item>
-              <Typography variant={"h4"} style={{ textAlign: "center" }}>
+              <Typography variant={"h4"} style={{ textAlign: "center" }} style={{cursor: "pointer"}}>
                 PROJECTS
               </Typography>
             </Grid>
@@ -178,15 +189,22 @@ function Header() {
         alignItems={"center"}
       spacing={0.8}>
       
-        <Grid item md={1} sm={1} xs={1} style={{cursor: "pointer"}}>
-          
-        <a href="https://wwww.facebook.com/dianne.modanza">
-          <img className={classes.iconsvg} src={fb} />
+        <Grid item md={1} sm={1} xs={1}>
+        <AnimatedCursor
+      innerSize={8}
+      outerSize={8}
+      color='193, 11, 111'
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={5}
+    />
+        <a href="https://wwww.facebook.com/dianne.modanza" >
+          <img className={classes.iconsvg} src={fb} style={{cursor: "pointer"}} />
           </a>
         </Grid>
         <Grid item md={1} sm={1} xs={1}>
         <a href="https://twitter.com/dcanon2">
-          <img className={classes.iconsvg} src={twitter} />
+          <img className={classes.iconsvg} src={twitter} style={{cursor: "pointer"}}/>
           </a>
         </Grid>
         <Grid item md={1} sm={1} xs={1}>
@@ -197,7 +215,7 @@ function Header() {
             smooth="true"
             duration="500"
           >
-          <img className={classes.iconsvg} src={linkedin} />
+          <img className={classes.iconsvg} src={linkedin} style={{cursor: "pointer"}} />
           </Link>
         </Grid>
         <Grid item md={1} sm={1} xs={1}>
@@ -208,7 +226,7 @@ function Header() {
             smooth="true"
             duration="500"
           >
-          <img className={classes.contactsvg} src={contact} />
+          <img className={classes.contactsvg} src={contact} style={{cursor: "pointer"}} />
           </Link>
           </Grid>
         
