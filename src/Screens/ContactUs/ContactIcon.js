@@ -1,7 +1,5 @@
 import React from 'react'
-import emailsvg from '../../assets/email 1.svg'
-import callsvg from '../../assets/phone.svg'
-import addresssvg from '../../assets/address 1.svg'
+
 import {
     Typography,
     Grid,
